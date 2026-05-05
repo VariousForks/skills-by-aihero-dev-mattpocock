@@ -26,3 +26,27 @@ These skills help you write, refactor, and fix code.
 ## Writing Skills
 
 - **write-a-skill** — Create new skills with proper structure, progressive disclosure, and bundled resources.
+
+## Installing individual skills as Claude Code plugins
+
+Skills in this repository can also be loaded by [Claude Code](https://docs.claude.com/en/docs/claude-code) as installable plugins, so you can opt in to one skill at a time without pulling everything else.
+
+Two ways to install **only `tdd`**:
+
+**1. Direct, no marketplace** — clone the repo and point Claude Code at the skill folder:
+
+```bash
+git clone https://github.com/aihero-dev/skills-by-mattpocock
+claude --plugin-dir ./skills-by-mattpocock/tdd
+```
+
+**2. Via the marketplace** — adds the repo as a catalog and installs only the plugins you choose:
+
+```text
+/plugin marketplace add aihero-dev/skills-by-mattpocock
+/plugin install tdd@skills-by-mattpocock
+```
+
+After install, the skill is available as the model-invoked skill `tdd` (or as `/tdd:tdd` if you prefer to invoke it explicitly).
+
+**Adding more skills to the marketplace** is opt-in. See [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for the per-skill recipe — each new skill is one self-contained PR.
