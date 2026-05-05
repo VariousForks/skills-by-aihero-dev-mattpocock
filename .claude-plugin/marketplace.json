@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "tdd",
+      "source": "./tdd",
+      "description": "Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.",
+      "category": "development",
+      "tags": ["tdd", "testing", "red-green-refactor", "vertical-slice"],
+      "homepage": "https://www.aihero.dev/skill-test-driven-development-claude-code"
+    }
+  ]
+}
