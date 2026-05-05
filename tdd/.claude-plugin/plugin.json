@@ -1,0 +1,12 @@
+{
+  "name": "tdd",
+  "description": "Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://www.aihero.dev/"
+  },
+  "homepage": "https://www.aihero.dev/skill-test-driven-development-claude-code",
+  "repository": "https://github.com/aihero-dev/skills-by-mattpocock",
+  "license": "MIT"
+}
