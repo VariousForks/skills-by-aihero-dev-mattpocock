@@ -1,0 +1,11 @@
+{
+  "name": "aihero-write-a-prd",
+  "description": "Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://www.aihero.dev/"
+  },
+  "repository": "https://github.com/mattpocock/skills",
+  "license": "MIT"
+}
