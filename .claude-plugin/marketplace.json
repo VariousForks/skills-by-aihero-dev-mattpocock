@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "aihero-grill-me",
+      "source": "./grill-me",
+      "description": "Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.",
+      "category": "planning",
+      "tags": ["planning", "design", "interview", "stress-test", "decision-tree"]
+    }
+  ]
+}
