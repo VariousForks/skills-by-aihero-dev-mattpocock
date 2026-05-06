@@ -1,5 +1,21 @@
 # Agent Skills — fork (Claude Code plugin packaging)
 
+## ⚡ Quick install: just the `tdd` skill
+
+Paste these two lines into Claude Code:
+
+```text
+/plugin marketplace add VariousForks/skills-by-aihero-dev-mattpocock
+/plugin install aihero-tdd@skills-by-mattpocock
+```
+
+Then `/reload-plugins`. The TDD skill is now invocable as `aihero-tdd:tdd`. The shorthand resolves to the fork's default branch (`main-gw`) automatically — no branch specifier needed. If you'd rather pin to an exact branch/tag, use the full-URL form: `/plugin marketplace add https://github.com/VariousForks/skills-by-aihero-dev-mattpocock.git#main-gw`.
+
+Other skills in this repo aren't packaged as plugins yet — see [§ Installing individual skills](#installing-individual-skills-as-claude-code-plugins) below for the longer explanation, and [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for how to package one.
+
+---
+
+
 > **This is a fork of [mattpocock/skills](https://github.com/mattpocock/skills).** All skill content (the SKILL.md files and their companion guides) is Matt Pocock's / AI Hero's work. This fork adds *packaging only*: the `tdd` skill is wired up as a Claude Code plugin (`.claude-plugin/plugin.json`), and a marketplace catalog (`.claude-plugin/marketplace.json`) at the repo root makes selective installation possible. Upstream feature request and full PR description: [mattpocock/skills#138](https://github.com/mattpocock/skills/issues/138).
 >
 > The default branch here is `main-gw` (Greg's customised trunk). The pristine upstream `main` is preserved as `main-upstream` for clean future syncs / PRs.
