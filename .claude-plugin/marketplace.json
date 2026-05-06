@@ -8,7 +8,7 @@
   },
   "plugins": [
     {
-      "name": "tdd",
+      "name": "aihero-tdd",
       "source": "./tdd",
       "description": "Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.",
       "category": "development",

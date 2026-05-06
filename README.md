@@ -44,9 +44,11 @@ claude --plugin-dir ./skills-by-mattpocock/tdd
 
 ```text
 /plugin marketplace add aihero-dev/skills-by-mattpocock
-/plugin install tdd@skills-by-mattpocock
+/plugin install aihero-tdd@skills-by-mattpocock
 ```
 
-After install, the skill is available as the model-invoked skill `tdd` (or as `/tdd:tdd` if you prefer to invoke it explicitly).
+After install, the skill is available as the model-invoked skill `aihero-tdd:tdd` (or invoked explicitly via the slash form `/aihero-tdd:tdd`).
+
+The `aihero-` prefix is the plugin's namespace — it prevents collisions when a user has multiple TDD plugins from different authors installed at the same time. The directory on disk stays as `tdd/`; the namespace is purely a label set in `tdd/.claude-plugin/plugin.json`.
 
 **Adding more skills to the marketplace** is opt-in. See [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for the per-skill recipe — each new skill is one self-contained PR.

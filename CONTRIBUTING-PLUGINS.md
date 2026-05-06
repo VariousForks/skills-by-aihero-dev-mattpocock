@@ -35,11 +35,11 @@ And one new entry in the marketplace catalog at the repo root:
 
 ### 1. Add the plugin manifest
 
-Create `<name>/.claude-plugin/plugin.json`:
+Create `<dir>/.claude-plugin/plugin.json`:
 
 ```json
 {
-  "name": "<name>",
+  "name": "aihero-<dir>",
   "description": "<one-line description, same wording as in README>",
   "version": "0.1.0",
   "author": { "name": "Matt Pocock", "url": "https://www.aihero.dev/" },
@@ -49,7 +49,14 @@ Create `<name>/.claude-plugin/plugin.json`:
 }
 ```
 
-Required: `name` (kebab-case, becomes the namespace, e.g. invoking the skill becomes `/<name>:<name>`). Everything else is optional but recommended.
+Two distinct names are at play here, **and they are decoupled on purpose**:
+
+* `<dir>` — the on-disk directory name (e.g. `tdd`, `write-a-prd`, `grill-me`). Keep this terse and matching the existing repo convention. This is what `source: "./<dir>"` references in `marketplace.json`.
+* `name` in `plugin.json` — the **plugin namespace** that becomes the install handle and the prefix for invocation (`/aihero-<dir>:<skill>`). Prefix with `aihero-` so the namespace conveys ownership when seen alongside plugins from other authors. The official Claude Code docs explicitly motivate namespacing this way: *"Plugin skills are always namespaced (like `/my-first-plugin:hello`) to prevent conflicts when multiple plugins have skills with the same name."* (https://code.claude.com/docs/en/plugins, Quickstart Step 4).
+
+So for the existing TDD skill: `<dir>` = `tdd`, `name` = `aihero-tdd`, install handle = `aihero-tdd@skills-by-mattpocock`, invocation = `/aihero-tdd:tdd`.
+
+Required: `name` (kebab-case). Everything else is optional but recommended.
 
 ### 2. Restructure the skill into `skills/<name>/`
 
@@ -72,8 +79,8 @@ Edit `.claude-plugin/marketplace.json` at the repo root. Append one entry to the
 
 ```json
 {
-  "name": "<name>",
-  "source": "./<name>",
+  "name": "aihero-<dir>",
+  "source": "./<dir>",
   "description": "<one-line description>",
   "category": "<development|planning|tooling|writing>",
   "tags": ["<tag1>", "<tag2>"],
@@ -81,24 +88,24 @@ Edit `.claude-plugin/marketplace.json` at the repo root. Append one entry to the
 }
 ```
 
-`source: "./<name>"` resolves relative to the marketplace root (the directory containing `.claude-plugin/`), per the Claude Code docs.
+`source: "./<dir>"` resolves relative to the marketplace root (the directory containing `.claude-plugin/`), per the Claude Code docs. The `name` here **must match** the `name` field in `<dir>/.claude-plugin/plugin.json` — that's the install handle (`/plugin install aihero-<dir>@skills-by-mattpocock`) and the namespace prefix.
 
 ### 4. Update the README
 
 In the section for the skill in `README.md`, you may add a "Install:" line referencing the per-skill install command:
 
 ```text
-/plugin install <name>@skills-by-mattpocock
+/plugin install aihero-<dir>@skills-by-mattpocock
 ```
 
 ### 5. Commit in small, reviewable steps
 
 Suggested commit sequence (one commit per logical change, mirroring how `tdd` was added):
 
-1. `feat(<name>): add Claude Code plugin manifest at <name>/.claude-plugin/plugin.json`
-2. `refactor(<name>): move SKILL.md and companions under <name>/skills/<name>/`
-3. `feat: add <name> entry to .claude-plugin/marketplace.json`
-4. `docs(README): note <name> as an individually-installable plugin`
+1. `feat(<dir>): add Claude Code plugin manifest at <dir>/.claude-plugin/plugin.json`
+2. `refactor(<dir>): move SKILL.md and companions under <dir>/skills/<dir>/`
+3. `feat: add aihero-<dir> entry to .claude-plugin/marketplace.json`
+4. `docs(README): note aihero-<dir> as an individually-installable plugin`
 
 Each commit message should include the doc quote justifying *why* the change is shaped that way, so future reviewers and AI agents can audit the rationale without leaving the repo. See the commits that introduced `tdd` for a template.
 
@@ -108,11 +115,11 @@ Before opening a PR:
 
 ```bash
 # 1. Direct loader path works
-claude --plugin-dir ./<name>
+claude --plugin-dir ./<dir>
 
 # 2. Local marketplace path works
 /plugin marketplace add ./
-/plugin install <name>@skills-by-mattpocock
+/plugin install aihero-<dir>@skills-by-mattpocock
 ```
 
 In each case, run the skill (or trigger it via its description) and confirm SKILL.md loads, companion-file links resolve, and any scripts execute.
