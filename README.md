@@ -13,6 +13,18 @@ Then `/reload-plugins`. The TDD skill is now invocable as `aihero-tdd:tdd`. The 
 
 Other skills in this repo aren't packaged as plugins yet — see [§ Installing individual skills](#installing-individual-skills-as-claude-code-plugins) below for the longer explanation, and [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for how to package one.
 
+### What you get after install
+
+Once `aihero-tdd:tdd` is loaded, asking Claude for TDD-driven work changes its behavior in three specific, observable ways:
+
+* **Interview before code.** Claude pauses and asks for the public interface, the first behavior to drive, and a priority list — instead of jumping straight to implementation. This is the skill's anti-pattern guardrail against bulk-test-writing followed by bulk-implementation.
+* **Strict vertical slicing.** One test → one minimal implementation → run → repeat. No multi-test bursts, no implementation that runs ahead of the test that justifies it.
+* **Explicit RED / GREEN narration.** Claude literally announces `RED confirmed (…)` after the failing run and `GREEN. Next behavior: …` after the passing run, giving you a clean audit trail when reviewing the session.
+
+A full reproducible verification — empty Go module + `Greet(name string) string` driven from zero through two red-green cycles — is captured in [**TDD-SKILL-IN-ACTION.md**](./TDD-SKILL-IN-ACTION.md). Useful both as a sanity check after you install (does the skill actually trigger?) and as a transcript-style example of what the loop looks like in practice.
+
+If after install Claude *doesn't* enter the interview / RED-GREEN flow on a TDD prompt, the most common cause is that `/reload-plugins` wasn't run after install, or the prompt didn't surface the trigger words from the skill description (`tdd`, `red-green-refactor`, `test-first`, `integration tests`). Trying again with one of those words usually fixes it.
+
 ---
 
 
