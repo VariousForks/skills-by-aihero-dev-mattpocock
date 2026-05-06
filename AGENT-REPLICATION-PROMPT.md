@@ -10,7 +10,7 @@ This file contains a copy-pasteable prompt you can give to a fresh Claude Code (
 
 ## The prompt
 
-> You are working in the `aihero-dev/skills-by-mattpocock` repository. Your task is to make the `<TARGET>` skill installable as a standalone Claude Code plugin, following exactly the same pattern that was applied to `tdd/` in commits `68cef57..c6e5255` on the branch `feat/marketplace-with-tdd-as-installable-plugin` (or whichever branch this file lives on).
+> You are working in the `mattpocock/skills` repository. Your task is to make the `<TARGET>` skill installable as a standalone Claude Code plugin, following exactly the same pattern that was applied to `tdd/` in commits `68cef57..c6e5255` on the branch `feat/marketplace-with-tdd-as-installable-plugin` (or whichever branch this file lives on).
 >
 > Before doing anything:
 >

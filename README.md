@@ -36,14 +36,14 @@ Two ways to install **only `tdd`**:
 **1. Direct, no marketplace** — clone the repo and point Claude Code at the skill folder:
 
 ```bash
-git clone https://github.com/aihero-dev/skills-by-mattpocock
+git clone https://github.com/mattpocock/skills
 claude --plugin-dir ./skills-by-mattpocock/tdd
 ```
 
 **2. Via the marketplace** — adds the repo as a catalog and installs only the plugins you choose:
 
 ```text
-/plugin marketplace add aihero-dev/skills-by-mattpocock
+/plugin marketplace add mattpocock/skills
 /plugin install aihero-tdd@skills-by-mattpocock
 ```
 

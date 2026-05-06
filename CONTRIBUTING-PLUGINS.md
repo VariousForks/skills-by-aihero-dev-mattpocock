@@ -44,7 +44,7 @@ Create `<dir>/.claude-plugin/plugin.json`:
   "version": "0.1.0",
   "author": { "name": "Matt Pocock", "url": "https://www.aihero.dev/" },
   "homepage": "<url to a blog post or video about this skill, if any>",
-  "repository": "https://github.com/aihero-dev/skills-by-mattpocock",
+  "repository": "https://github.com/mattpocock/skills",
   "license": "MIT"
 }
 ```
