@@ -8,7 +8,7 @@ These skills help you think through problems before writing code.
 
 - **write-a-prd** — Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue.
 - **prd-to-issues** — Break a PRD into independently-grabbable GitHub issues using vertical slices.
-- **grill-me** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved. Install: `/plugin install aihero-grill-me@skills-by-mattpocock`
+- **grill-me** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved. Install: `/plugin install aihero-grill-me@variousforks-mattpocock-skills`
 
 ## Development
 
