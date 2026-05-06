@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "aihero-improve-codebase-architecture",
+      "source": "./improve-codebase-architecture",
+      "description": "Explore a codebase for architectural improvement opportunities, focusing on deepening shallow modules and improving testability.",
+      "category": "development",
+      "tags": ["architecture", "refactoring", "code-quality", "testability", "modules"]
+    }
+  ]
+}
