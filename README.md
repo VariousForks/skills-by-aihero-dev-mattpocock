@@ -6,7 +6,7 @@ Paste these two lines into Claude Code:
 
 ```text
 /plugin marketplace add VariousForks/skills-by-aihero-dev-mattpocock
-/plugin install aihero-tdd@skills-by-mattpocock
+/plugin install aihero-tdd@variousforks-mattpocock-skills
 ```
 
 Then `/reload-plugins`. The TDD skill is now invocable as `aihero-tdd:tdd`. The shorthand resolves to the fork's default branch (`main-gw`) automatically — no branch specifier needed. If you'd rather pin to an exact branch/tag, use the full-URL form: `/plugin marketplace add https://github.com/VariousForks/skills-by-aihero-dev-mattpocock.git#main-gw`.
@@ -68,7 +68,7 @@ claude --plugin-dir ./skills-by-aihero-dev-mattpocock/tdd
 
 ```text
 /plugin marketplace add VariousForks/skills-by-aihero-dev-mattpocock
-/plugin install aihero-tdd@skills-by-mattpocock
+/plugin install aihero-tdd@variousforks-mattpocock-skills
 ```
 
 After install, the skill is available as the model-invoked skill `aihero-tdd:tdd` (or invoked explicitly via the slash form `/aihero-tdd:tdd`).

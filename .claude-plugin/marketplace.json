@@ -1,7 +1,7 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "skills-by-mattpocock",
-  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "name": "variousforks-mattpocock-skills",
+  "description": "Greg's fork of Matt Pocock / AI Hero's agent-skills collection, with skills exposed as individually-installable Claude Code plugins. The pristine upstream is at mattpocock/skills.",
   "owner": {
     "name": "AI Hero (Matt Pocock)",
     "email": "matt@aihero.dev"
