@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "aihero-write-a-prd",
+      "source": "./write-a-prd",
+      "description": "Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue.",
+      "category": "planning",
+      "tags": ["prd", "planning", "interview", "github-issue", "design"]
+    }
+  ]
+}
