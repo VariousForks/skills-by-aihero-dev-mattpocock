@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "aihero-prd-to-issues",
+      "source": "./prd-to-issues",
+      "description": "Break a PRD into independently-grabbable GitHub issues using vertical slices.",
+      "category": "planning",
+      "tags": ["prd", "github-issues", "planning", "vertical-slices", "tracer-bullet"]
+    }
+  ]
+}
