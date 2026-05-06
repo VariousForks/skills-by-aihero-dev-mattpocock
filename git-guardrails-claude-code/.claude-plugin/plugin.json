@@ -1,0 +1,11 @@
+{
+  "name": "aihero-git-guardrails-claude-code",
+  "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://www.aihero.dev/"
+  },
+  "repository": "https://github.com/mattpocock/skills",
+  "license": "MIT"
+}
