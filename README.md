@@ -21,7 +21,7 @@ These skills help you write, refactor, and fix code.
 ## Tooling & Setup
 
 - **setup-pre-commit** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.
-- **git-guardrails-claude-code** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute. Install: `/plugin install aihero-git-guardrails-claude-code@skills-by-mattpocock`
+- **git-guardrails-claude-code** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute. Install: `/plugin install aihero-git-guardrails-claude-code@variousforks-mattpocock-skills`
 
 ## Writing Skills
 
