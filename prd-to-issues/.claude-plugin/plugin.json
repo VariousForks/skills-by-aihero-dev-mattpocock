@@ -1,0 +1,11 @@
+{
+  "name": "aihero-prd-to-issues",
+  "description": "Break a PRD into independently-grabbable GitHub issues using vertical slices.",
+  "version": "0.1.0",
+  "author": {
+    "name": "Matt Pocock",
+    "url": "https://www.aihero.dev/"
+  },
+  "repository": "https://github.com/mattpocock/skills",
+  "license": "MIT"
+}
