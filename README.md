@@ -1,4 +1,10 @@
-# Agent Skills
+# Agent Skills — fork (Claude Code plugin packaging)
+
+> **This is a fork of [mattpocock/skills](https://github.com/mattpocock/skills).** All skill content (the SKILL.md files and their companion guides) is Matt Pocock's / AI Hero's work. This fork adds *packaging only*: the `tdd` skill is wired up as a Claude Code plugin (`.claude-plugin/plugin.json`), and a marketplace catalog (`.claude-plugin/marketplace.json`) at the repo root makes selective installation possible. Upstream feature request and full PR description: [mattpocock/skills#138](https://github.com/mattpocock/skills/issues/138).
+>
+> The default branch here is `main-gw` (Greg's customised trunk). The pristine upstream `main` is preserved as `main-upstream` for clean future syncs / PRs.
+>
+> 🤝 Greg (human) and Claude (AI) co-built the packaging — with much respect for Matt's TDD work.
 
 A collection of agent skills that extend capabilities across planning, development, and tooling.
 
@@ -29,21 +35,23 @@ These skills help you write, refactor, and fix code.
 
 ## Installing individual skills as Claude Code plugins
 
-Skills in this repository can also be loaded by [Claude Code](https://docs.claude.com/en/docs/claude-code) as installable plugins, so you can opt in to one skill at a time without pulling everything else.
+Skills in this repository can be loaded by [Claude Code](https://docs.claude.com/en/docs/claude-code) as installable plugins, so you can opt in to one skill at a time without pulling everything else.
+
+> **Note:** the plugin manifests live on this fork only. Until upstream [mattpocock/skills#138](https://github.com/mattpocock/skills/issues/138) is resolved, the install commands below point at this fork. If the upstream eventually adopts the same packaging, the same commands will work against `mattpocock/skills` directly.
 
 Two ways to install **only `tdd`**:
 
-**1. Direct, no marketplace** — clone the repo and point Claude Code at the skill folder:
+**1. Direct, no marketplace** — clone the fork and point Claude Code at the skill folder:
 
 ```bash
-git clone https://github.com/mattpocock/skills
-claude --plugin-dir ./skills-by-mattpocock/tdd
+git clone https://github.com/VariousForks/skills-by-aihero-dev-mattpocock
+claude --plugin-dir ./skills-by-aihero-dev-mattpocock/tdd
 ```
 
-**2. Via the marketplace** — adds the repo as a catalog and installs only the plugins you choose:
+**2. Via the marketplace** — adds the fork as a catalog and installs only the plugins you choose:
 
 ```text
-/plugin marketplace add mattpocock/skills
+/plugin marketplace add VariousForks/skills-by-aihero-dev-mattpocock
 /plugin install aihero-tdd@skills-by-mattpocock
 ```
 
@@ -51,4 +59,4 @@ After install, the skill is available as the model-invoked skill `aihero-tdd:tdd
 
 The `aihero-` prefix is the plugin's namespace — it prevents collisions when a user has multiple TDD plugins from different authors installed at the same time. The directory on disk stays as `tdd/`; the namespace is purely a label set in `tdd/.claude-plugin/plugin.json`.
 
-**Adding more skills to the marketplace** is opt-in. See [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for the per-skill recipe — each new skill is one self-contained PR.
+**Adding more skills to the marketplace** is opt-in. See [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for the per-skill recipe and [AGENT-REPLICATION-PROMPT.md](./AGENT-REPLICATION-PROMPT.md) for a copy-pasteable prompt that walks an AI agent through applying the same pattern to any of the unconverted skills above (`write-a-prd`, `grill-me`, `prd-to-issues`, etc.) — each new skill is one self-contained commit/PR.
