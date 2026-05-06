@@ -7,7 +7,7 @@ A collection of agent skills that extend capabilities across planning, developme
 These skills help you think through problems before writing code.
 
 - **write-a-prd** — Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue.
-- **prd-to-issues** — Break a PRD into independently-grabbable GitHub issues using vertical slices. Install: `/plugin install aihero-prd-to-issues@skills-by-mattpocock`
+- **prd-to-issues** — Break a PRD into independently-grabbable GitHub issues using vertical slices. Install: `/plugin install aihero-prd-to-issues@variousforks-mattpocock-skills`
 - **grill-me** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.
 
 ## Development
