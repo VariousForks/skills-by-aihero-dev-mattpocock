@@ -14,6 +14,55 @@
       "category": "development",
       "tags": ["tdd", "testing", "red-green-refactor", "vertical-slice"],
       "homepage": "https://www.aihero.dev/skill-test-driven-development-claude-code"
+    },
+    {
+      "name": "aihero-write-a-prd",
+      "source": "./write-a-prd",
+      "description": "Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue.",
+      "category": "planning",
+      "tags": ["prd", "planning", "interview", "github-issue", "design"]
+    },
+    {
+      "name": "aihero-prd-to-plan",
+      "source": "./prd-to-plan",
+      "description": "Turn a PRD into a multi-phase implementation plan using tracer-bullet vertical slices, saved as a local Markdown file in `./plans/`.",
+      "category": "planning",
+      "tags": ["prd", "planning", "implementation-plan", "tracer-bullet", "vertical-slice"]
+    },
+    {
+      "name": "aihero-prd-to-issues",
+      "source": "./prd-to-issues",
+      "description": "Break a PRD into independently-grabbable GitHub issues using vertical slices.",
+      "category": "planning",
+      "tags": ["prd", "github-issues", "planning", "vertical-slices", "tracer-bullet"]
+    },
+    {
+      "name": "aihero-grill-me",
+      "source": "./grill-me",
+      "description": "Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.",
+      "category": "planning",
+      "tags": ["interview", "planning", "design-review", "decision-tree", "socratic"]
+    },
+    {
+      "name": "aihero-git-guardrails-claude-code",
+      "source": "./git-guardrails-claude-code",
+      "description": "Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.",
+      "category": "tooling",
+      "tags": ["git", "guardrails", "hooks", "safety", "claude-code"]
+    },
+    {
+      "name": "aihero-improve-codebase-architecture",
+      "source": "./improve-codebase-architecture",
+      "description": "Explore a codebase for architectural improvement opportunities, focusing on deepening shallow modules and improving testability.",
+      "category": "development",
+      "tags": ["architecture", "refactoring", "testability", "deep-modules", "code-quality"]
+    },
+    {
+      "name": "aihero-triage-issue",
+      "source": "./triage-issue",
+      "description": "Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan.",
+      "category": "development",
+      "tags": ["triage", "bug-investigation", "github-issues", "tdd", "root-cause"]
     }
   ]
 }

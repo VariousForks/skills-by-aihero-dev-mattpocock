@@ -1,17 +1,28 @@
 # Agent Skills — fork (Claude Code plugin packaging)
 
-## ⚡ Quick install: just the `tdd` skill
+## ⚡ Quick install: pick any skill (or several)
 
-Paste these two lines into Claude Code:
+Add the marketplace once, then install whichever skills you want — one at a time, no all-or-nothing:
 
 ```text
 /plugin marketplace add VariousForks/skills-by-aihero-dev-mattpocock
 /plugin install aihero-tdd@variousforks-mattpocock-skills
 ```
 
-Then `/reload-plugins`. The TDD skill is now invocable as `aihero-tdd:tdd`. The shorthand resolves to the fork's default branch (`main-gw`) automatically — no branch specifier needed. If you'd rather pin to an exact branch/tag, use the full-URL form: `/plugin marketplace add https://github.com/VariousForks/skills-by-aihero-dev-mattpocock.git#main-gw`.
+Then `/reload-plugins`. The skill is now invocable as `aihero-<name>:<name>` (e.g. `aihero-tdd:tdd`). The shorthand resolves to the fork's default branch (`main-gw`) automatically — no branch specifier needed. If you'd rather pin to an exact branch/tag, use the full-URL form: `/plugin marketplace add https://github.com/VariousForks/skills-by-aihero-dev-mattpocock.git#main-gw`.
 
-Other skills in this repo aren't packaged as plugins yet — see [§ Installing individual skills](#installing-individual-skills-as-claude-code-plugins) below for the longer explanation, and [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for how to package one. **Independent issues and PRs against this fork are welcome** — see [CONTRIBUTING.md](./CONTRIBUTING.md) for the contribution culture (Why?-driven descriptions, example-based testing, AI co-authorship transparency).
+**Available plugins** (each can be installed independently):
+
+* `aihero-tdd@variousforks-mattpocock-skills` — test-driven development loop
+* `aihero-write-a-prd@variousforks-mattpocock-skills` — PRD interview
+* `aihero-prd-to-plan@variousforks-mattpocock-skills` — PRD → multi-phase plan
+* `aihero-prd-to-issues@variousforks-mattpocock-skills` — PRD → GitHub issues
+* `aihero-grill-me@variousforks-mattpocock-skills` — Socratic plan review
+* `aihero-git-guardrails-claude-code@variousforks-mattpocock-skills` — block dangerous git
+* `aihero-improve-codebase-architecture@variousforks-mattpocock-skills` — architecture review
+* `aihero-triage-issue@variousforks-mattpocock-skills` — bug triage with TDD-fix plan
+
+Each of the 8 plugins was packaged on its own `feat/marketplace-with-<skill>-as-installable-plugin` branch (one PR's worth of changes per skill, branched from `main-upstream`) and consolidated here on `main-gw`. **Independent issues and PRs against this fork are welcome** — see [CONTRIBUTING.md](./CONTRIBUTING.md) for the contribution culture (Why?-driven descriptions, example-based testing, AI co-authorship transparency). [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) is the recipe for packaging another skill from this repo.
 
 ### What you get after install
 
@@ -40,22 +51,23 @@ A collection of agent skills that extend capabilities across planning, developme
 
 These skills help you think through problems before writing code.
 
-- **write-a-prd** — Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue.
-- **prd-to-issues** — Break a PRD into independently-grabbable GitHub issues using vertical slices.
-- **grill-me** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved.
+- **write-a-prd** — Create a PRD through an interactive interview, codebase exploration, and module design. Filed as a GitHub issue. Install: `/plugin install aihero-write-a-prd@variousforks-mattpocock-skills`
+- **prd-to-plan** — Turn a PRD into a multi-phase implementation plan using tracer-bullet vertical slices, saved as a local Markdown file in `./plans/`. Install: `/plugin install aihero-prd-to-plan@variousforks-mattpocock-skills`
+- **prd-to-issues** — Break a PRD into independently-grabbable GitHub issues using vertical slices. Install: `/plugin install aihero-prd-to-issues@variousforks-mattpocock-skills`
+- **grill-me** — Get relentlessly interviewed about a plan or design until every branch of the decision tree is resolved. Install: `/plugin install aihero-grill-me@variousforks-mattpocock-skills`
 
 ## Development
 
 These skills help you write, refactor, and fix code.
 
-- **tdd** — Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.
-- **triage-issue** — Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan.
-- **improve-codebase-architecture** — Explore a codebase for architectural improvement opportunities, focusing on deepening shallow modules and improving testability.
+- **tdd** — Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time. Install: `/plugin install aihero-tdd@variousforks-mattpocock-skills`
+- **triage-issue** — Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan. Install: `/plugin install aihero-triage-issue@variousforks-mattpocock-skills`
+- **improve-codebase-architecture** — Explore a codebase for architectural improvement opportunities, focusing on deepening shallow modules and improving testability. Install: `/plugin install aihero-improve-codebase-architecture@variousforks-mattpocock-skills`
 
 ## Tooling & Setup
 
 - **setup-pre-commit** — Set up Husky pre-commit hooks with lint-staged, Prettier, type checking, and tests.
-- **git-guardrails-claude-code** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute.
+- **git-guardrails-claude-code** — Set up Claude Code hooks to block dangerous git commands (push, reset --hard, clean, etc.) before they execute. Install: `/plugin install aihero-git-guardrails-claude-code@variousforks-mattpocock-skills`
 
 ## Writing Skills
 
