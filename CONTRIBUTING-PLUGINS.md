@@ -1,5 +1,7 @@
 # Contributing: adding a skill to the marketplace
 
+> **Working from this fork?** Independent issues and PRs against `main-gw` are explicitly welcome — see [`CONTRIBUTING.md`](./CONTRIBUTING.md) for the general contribution norms (Why?-driven PR descriptions, example-based testing, AI co-authorship transparency). This file (`CONTRIBUTING-PLUGINS.md`) is the *specific recipe* for one type of contribution: packaging an additional skill as a Claude Code plugin. The recipe is also the canonical reference if you're sending an analogous PR to upstream [`mattpocock/skills`](https://github.com/mattpocock/skills) — both targets accept the same shape of change.
+
 This repository ships its skills as individually-installable Claude Code plugins. Adding a skill to the marketplace is **opt-in, one skill per PR** — there is no automation that auto-publishes every top-level directory, and that is deliberate. This file is the recipe.
 
 If you are an AI agent reading this to replicate the pattern that was applied to `tdd/`: every step below has a 1:1 mapping to a commit on the branch that introduced this file. Run `git log --reverse --format="%h %s" -- '.claude-plugin' 'tdd/.claude-plugin' 'tdd/skills' README.md CONTRIBUTING-PLUGINS.md` to see the canonical commit sequence.

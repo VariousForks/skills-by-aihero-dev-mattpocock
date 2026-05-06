@@ -11,7 +11,7 @@ Paste these two lines into Claude Code:
 
 Then `/reload-plugins`. The TDD skill is now invocable as `aihero-tdd:tdd`. The shorthand resolves to the fork's default branch (`main-gw`) automatically — no branch specifier needed. If you'd rather pin to an exact branch/tag, use the full-URL form: `/plugin marketplace add https://github.com/VariousForks/skills-by-aihero-dev-mattpocock.git#main-gw`.
 
-Other skills in this repo aren't packaged as plugins yet — see [§ Installing individual skills](#installing-individual-skills-as-claude-code-plugins) below for the longer explanation, and [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for how to package one.
+Other skills in this repo aren't packaged as plugins yet — see [§ Installing individual skills](#installing-individual-skills-as-claude-code-plugins) below for the longer explanation, and [CONTRIBUTING-PLUGINS.md](./CONTRIBUTING-PLUGINS.md) for how to package one. **Independent issues and PRs against this fork are welcome** — see [CONTRIBUTING.md](./CONTRIBUTING.md) for the contribution culture (Why?-driven descriptions, example-based testing, AI co-authorship transparency).
 
 ### What you get after install
 

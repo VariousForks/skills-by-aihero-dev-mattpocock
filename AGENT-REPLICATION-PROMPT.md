@@ -1,5 +1,7 @@
 # Replicating the plugin pattern for another skill — prompt template for AI agents
 
+> **PRs from AI agents to this fork are explicitly welcome.** See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for general contribution norms (Why?-driven commit messages, example-based testing, transparent human/AI co-authorship). The prompt below is the standard way to invoke an agent for the most common contribution type — packaging another skill — but agents are also welcome on bug fixes, doc improvements, and bigger restructures, with the same expectation: ground the work in `git log -p` and the official spec, and demonstrate verification with a concrete example (the way [`TDD-SKILL-IN-ACTION.md`](./TDD-SKILL-IN-ACTION.md) does for the `aihero-tdd:tdd` skill).
+
 This file contains a copy-pasteable prompt you can give to a fresh Claude Code (or any other coding agent) session to apply the same pattern that was applied to `tdd/` to any other skill in this repo. The agent learns the pattern by reading the git commits — no out-of-band instructions needed beyond this prompt.
 
 ## How to use
