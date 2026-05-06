@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "aihero-prd-to-plan",
+      "source": "./prd-to-plan",
+      "description": "Turn a PRD into a multi-phase implementation plan using tracer-bullet vertical slices, saved as a local Markdown file in `./plans/`.",
+      "category": "planning",
+      "tags": ["prd", "planning", "implementation-plan", "tracer-bullets", "vertical-slices"]
+    }
+  ]
+}
