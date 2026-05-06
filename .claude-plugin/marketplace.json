@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "skills-by-mattpocock",
+  "description": "AI Hero / Matt Pocock's collection of agent skills, exposed as individually-installable Claude Code plugins.",
+  "owner": {
+    "name": "AI Hero (Matt Pocock)",
+    "email": "matt@aihero.dev"
+  },
+  "plugins": [
+    {
+      "name": "aihero-triage-issue",
+      "source": "./triage-issue",
+      "description": "Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan.",
+      "category": "development",
+      "tags": ["triage", "bug-investigation", "github-issues", "tdd", "root-cause"]
+    }
+  ]
+}
