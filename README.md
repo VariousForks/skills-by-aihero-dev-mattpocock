@@ -15,7 +15,7 @@ These skills help you think through problems before writing code.
 These skills help you write, refactor, and fix code.
 
 - **tdd** — Test-driven development with a red-green-refactor loop. Builds features or fixes bugs one vertical slice at a time.
-- **triage-issue** — Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan. Install: `/plugin install aihero-triage-issue@skills-by-mattpocock`
+- **triage-issue** — Investigate a bug by exploring the codebase, identify the root cause, and file a GitHub issue with a TDD-based fix plan. Install: `/plugin install aihero-triage-issue@variousforks-mattpocock-skills`
 - **improve-codebase-architecture** — Explore a codebase for architectural improvement opportunities, focusing on deepening shallow modules and improving testability.
 
 ## Tooling & Setup
